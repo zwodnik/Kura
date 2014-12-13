@@ -57,7 +57,7 @@ namespace Kura
 
             kawalTextBlock.Text = kawal;
 
-            suchosc.Text = String.Format("Suche na {0:P2}", _random.NextDouble() * 3);
+            suchosc.Text = String.Format("Suche na {0:P0}", _random.NextDouble() * 3);
 
             bleep.Play();
         }
