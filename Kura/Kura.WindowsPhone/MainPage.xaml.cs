@@ -22,11 +22,13 @@ namespace Kura
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private Random _random;
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+            _random = new Random();
         }
 
         /// <summary>
@@ -43,6 +45,21 @@ namespace Kura
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string kawal;
+            do
+            {
+                kawal = DataBase.Hasla()[_random.Next(0, DataBase.Hasla().Count)];
+            } while (kawalTextBlock.Text == kawal);
+
+            kawalTextBlock.Text = kawal;
+
+            suchosc.Text = String.Format("Suche na {0:P2}", _random.NextDouble() * 3);
+
+            bleep.Play();
         }
     }
 }

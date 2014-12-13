@@ -5,9 +5,21 @@
     xmlns:local="using:Kura"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com"
     mc:Ignorable="d">
+    <Border Background="BurlyWood">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/kurka.gif" AlignmentY="Top" AlignmentX="Center"  />
+        </Grid.Background>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <MediaElement x:Name="bleep" AudioCategory="GameEffects" Source="Assets/chicken.wav" AutoPlay="False" Visibility="Collapsed"/>
+
+            <TextBlock Text="Kura Krystyna" Foreground="Black" FontSize="54" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="150,50,0,250"/>
+            <TextBlock x:Name="suchosc" Text="" Foreground="Black" FontSize="54" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="150,0,0,250"/>
+            <TextBlock x:Name="kawalTextBlock" Text="Naciśnij przycisk a opowiem Ci kawał!"  HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="32" Margin="0,0,100,350" Width="350" Height="250" Foreground="Black" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"  />
+        <Button Content="Opowiedz następny!" Height="150" Margin="0,0,200,70" Click="Button_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="White" Foreground="Black" />
 
     </Grid>
+    </Border>
 </Page>

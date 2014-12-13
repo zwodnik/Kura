@@ -8,7 +8,22 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Border Background="BurlyWood">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/kurka.gif" AlignmentY="Top" AlignmentX="Center" Stretch="UniformToFill"  >
+                    <ImageBrush.RelativeTransform>
+                        <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="-0.3"/>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Grid.Background>
 
-    </Grid>
+            <MediaElement x:Name="bleep" AudioCategory="GameEffects" Source="Assets/chicken.wav" AutoPlay="False" Visibility="Collapsed"/>
+
+            <TextBlock x:Name="suchosc" Text="" Foreground="Black" FontSize="16" HorizontalAlignment="Right" FontWeight="Bold"  VerticalAlignment="Center" Margin="0,200,50,250"/>
+            <TextBlock x:Name="kawalTextBlock" Text="Naciśnij przycisk a opowiem Ci kawał!"  HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="16" Margin="0,30,40,0" Width="180" Height="150" Foreground="Black" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"  />
+            <Button Content="Opowiedz następny!" Height="150" Margin="0,0,20,70" Click="Button_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="White" Foreground="Black" />
+
+        </Grid>
+    </Border>
 </Page>
