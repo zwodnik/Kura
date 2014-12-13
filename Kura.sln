@@ -11,13 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kura.Windows", "Kura\Kura.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kura.WindowsPhone", "Kura\Kura.WindowsPhone\Kura.WindowsPhone.csproj", "{B6F99A6B-6CFB-456E-B5CA-BD15B7B8B477}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2380BE82-3409-4F3F-9BAA-973A58976703}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Kura\Kura.Shared\Kura.Shared.projitems*{cac6538b-fc8b-4764-abd1-c709c5db8f5a}*SharedItemsImports = 13
